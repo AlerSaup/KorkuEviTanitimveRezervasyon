@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/site.css" />
+    <style>
+        /* Genel Stil */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            color: #2d3748;
+            overflow-x: hidden;
+        }
+
+        /* Yan Menü (Sidebar) */
+        .sidebar {
+            height: 100vh;
+            background: linear-gradient(180deg, #2d3748, #1a202c);
+            padding: 20px;
+            color: #ffffff;
+            position: fixed;
+            width: 250px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+            .sidebar a {
+                color: #a0aec0;
+                text-decoration: none;
+                margin: 15px 0;
+                display: block;
+                padding: 12px 15px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+                .sidebar a:hover {
+                    background-color: #4a5568;
+                    color: #ffffff;
+                    transform: translateX(10px);
+                }
+
+        /* İçerik Alanı */
+        .content {
+            margin-left: 270px;
+            padding: 30px;
+            transition: margin-left 0.3s ease;
+            background-color: #f8fafc;
+            min-height: 100vh;
+            width:200%;
+        }
+
+        /* Form Elemanları */
+        .form-control {
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e0;
+            padding: 12px;
+            width: calc(100% - 24px);
+            width: 300%;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+            .form-control:focus {
+                border-color: #3182ce;
+                box-shadow: 0 0 8px rgba(49, 130, 206, 0.5);
+            }
+
+        /* Butonlar */
+        .btn {
+            border-radius: 6px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: #4299e1;
+            color: white;
+        }
+
+            .btn-primary:hover {
+                background-color: #3182ce;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+        .btn-danger {
+            background-color: #e53e3e;
+            color: white;
+        }
+
+            .btn-danger:hover {
+                background-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+        /* Tablo */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+            .table th, .table td {
+                padding: 15px;
+                text-align: left;
+            }
+
+            .table th {
+                background-color: #2d3748;
+                color: white;
+                font-size: 14px;
+            }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f7fafc;
+        }
+
+        .table-striped tbody tr:hover {
+            background-color: #edf2f7;
+        }
+
+        /* İşlem Bağlantıları */
+        .action-link {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+            .action-link.edit {
+                background-color: #4299e1;
+                color: white;
+            }
+
+                .action-link.edit:hover {
+                    background-color: #3182ce;
+                    transform: translateY(-2px);
+                }
+
+            .action-link.details {
+                background-color: #38a169;
+                color: white;
+            }
+
+                .action-link.details:hover {
+                    background-color: #2f855a;
+                    transform: translateY(-2px);
+                }
+
+            .action-link.delete {
+                background-color: #e53e3e;
+                color: white;
+            }
+
+                .action-link.delete:hover {
+                    background-color: #c53030;
+                    transform: translateY(-2px);
+                }
+
+            .action-link.create {
+                background-color: #ecc94b;
+                color: black;
+            }
+
+                .action-link.create:hover {
+                    background-color: #d69e2e;
+                    transform: translateY(-2px);
+                }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            background-color: #edf2f7;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+            .btn-back:hover {
+                background-color: #e2e8f0;
+                color: #1a202c;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+        /* Düzenle (Edit) Butonu */
+        .btn-edit {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            background-color: #4a90e2;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+            .btn-edit:hover {
+                background-color: #357ab7;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+
+        #logout {
+            height: 64px;
+            width: 64px;
+            margin-top: 165%;
+            margin-left:-5%;
+            margin-left:-5%;
+            border-radius: 50%; /* Düğmeyi yuvarlak yapar */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden; /* Taşan alanları gizler */
+        }
+
+            #logout img {
+                width: 75%; /* Resmi düğme boyutuna göre ölçeklendirir */
+                height: 75%;
+                object-fit: cover; /* Resmi düğmenin içine sığacak şekilde kırpar */
+            }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Admin Paneli</h2>
+            <a href="/anasayfas">Anasayfa</a>
+            <a href="/kurallariceriks">Kurallar İçerik</a>
+            <a href="/kurallarbasliks">Kurallar Başlık</a>
+            <a href="/iletisimbasliks">İletişim Başlık</a>
+            <a href="/iletisimiceriks">İletişim İçerik</a>
+            <a href="/rezervasyons">Rezervasyon</a>
+            <a id="logout" href="/"><img src="https://i.hizliresim.com/9h8v9rr.png" /></a>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <div class="container">
+@*                 <h1>Sayfa Başlığı</h1>
+                <p>Burada dinamik içerik görünecek.</p> *@
+                <!-- Burada sayfaya özel içerikler yüklenecek -->
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js">
+        @RenderSection("Scripts", required: false)
+        </script>
+</body>
+</html>

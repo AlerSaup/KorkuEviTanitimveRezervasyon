@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Rezervasyon Hatası";
+}
+
+<div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Hata!</h4>
+    <p>Bu tarih için zaten bir rezervasyon alınmıştır.</p>
+    <hr>
+    <p class="mb-0">Lütfen farklı bir tarih seçerek tekrar deneyiniz.</p>
+</div>
+
+<a href="@Url.Action("Create", "rezervasyon")" class="btn btn-primary">Geri Dön</a>

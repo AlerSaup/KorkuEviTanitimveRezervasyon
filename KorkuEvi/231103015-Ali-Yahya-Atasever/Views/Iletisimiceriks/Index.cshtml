@@ -1,0 +1,49 @@
+﻿@model IEnumerable<_231103015_Ali_Yahya_Atasever.Database.Iletisimicerik>
+
+@{
+    Layout = "~/Views/Shared/adminpanel.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+        <a class="action-link create" asp-action="Create">Yeni Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Iletisimitel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iletisimadres)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iletisimitel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iletisimadres)
+            </td>
+            <td>
+                        <a class="action-link edit" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                        <a class="action-link details" asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
+                        <a class="action-link delete" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

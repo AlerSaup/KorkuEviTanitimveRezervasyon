@@ -1,0 +1,116 @@
+/* anasayfa.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.outer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+    .top-bar .tb-contact {
+        float: left;
+    }
+
+    .top-bar .tb-social {
+        float: right;
+    }
+
+.header-2 {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+    .header-2 .logo img {
+        max-width: 100%;
+    }
+
+.navy {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+    .navy ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .navy ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+            .navy ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+.main-block {
+    padding: 20px 0;
+}
+
+.block-heading-two h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.owl-carousel .owl-item {
+    text-align: center;
+}
+
+    .owl-carousel .owl-item img {
+        max-width: 100%;
+    }
+
+.foot {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+    .foot .foot-item {
+        margin-bottom: 20px;
+    }
+
+        .foot .foot-item h5 {
+            color: #fff;
+        }
+
+    .foot .foot-item-content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .foot .foot-item-content ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }

@@ -1,0 +1,39 @@
+﻿@model _231103015_Ali_Yahya_Atasever.Database.Iletisimicerik
+
+@{
+    Layout = "~/Views/Shared/adminpanel.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detaylar</title>
+</head>
+<body>
+
+<div>
+    <h4>İletişim İçeriği Düzenleme</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Iletisimitel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Iletisimitel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Iletisimadres)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Iletisimadres)
+        </dd>
+    </dl>
+</div>
+<div>
+        <a class="btn-edit" asp-action="Edit" asp-route-id="@Model?.Id">Düzenle</a> |
+        <a class="btn-back" asp-action="Index">Geri Dön</a>
+</div>
+</body>
+</html>

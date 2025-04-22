@@ -1,0 +1,487 @@
+/* Genel Ayarlar */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial', sans-serif;
+	background-color: #121212;
+	color: #f5f5f5;
+	background-image: url('/arkaplan3.png');
+	background-size: cover;
+	line-height: 1.6;
+}
+
+/* Baþlýklar */
+h1,
+h2,
+h3 {
+	color: #00ff7f;
+	text-align: center;
+	margin: 20px 0;
+}
+
+/* Menü */
+nav {
+	background: #1a1a1a;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	nav a {
+		color: #f5f5f5;
+		text-decoration: none;
+		margin: 0 15px;
+		font-size: 18px;
+		transition: color 0.3s;
+	}
+
+		nav a:hover {
+			color: #00ff7f;
+		}
+
+/* Butonlar */
+button,
+.btn {
+	background: #00ff7f;
+	color: #121212;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 5px;
+	transition: background 0.3s;
+}
+
+	button:hover,
+	.btn:hover {
+		background: #00cc63;
+	}
+
+/* Kartlar ve Bölüm Kutularý */
+.card {
+	background: #1a1a1a;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	padding: 20px;
+	margin: 20px;
+}
+
+	.card img {
+		width: 100%;
+		border-radius: 10px;
+	}
+
+/* WhatsApp ve Arama Butonlarý */
+.whatsapp,
+.call {
+	display: inline-block;
+	padding: 20px 50px;
+	margin: 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: all 0.3s;
+}
+
+.whatsapp {
+	background-color: #25d366;
+}
+
+	.whatsapp:hover {
+		color: #fff;
+		background-color: #1ebd5c;
+	}
+
+.phone {
+	text-decoration: none;
+	color: #00cc63;
+	padding: 20px 50px;
+	border: 3px #00cc63 solid;
+}
+.phone2 {
+	text-decoration: none;
+	color: #fff;
+}
+
+	.phone:hover {
+		color: #00cc63;
+		border-color: #07e974;
+		transition: all 0.3s;
+	}
+
+/* Footer */
+footer {
+	text-align: center;
+	padding: 20px;
+	background: #1a1a1a;
+	color: #777;
+	font-size: 14px;
+}
+
+	footer a {
+		color: #00ff7f;
+		text-decoration: none;
+	}
+
+		footer a:hover {
+			text-decoration: underline;
+		}
+
+
+.head-slogan {
+	color: #40da6c;
+	font-size: 25px;
+	position: relative;
+	margin-top: 5%;
+	text-align: center;
+}
+
+#denemeid {
+	font-weight: bold;
+	/* Yazý kalýnlýðýný ayarlayýn */
+	font-size: 30px;
+	background: linear-gradient(to right, #52cb7b, #5df7e3);
+	-webkit-background-clip: text;
+	/* Metin rengi için arka planý kes */
+	-webkit-text-fill-color: transparent;
+	/* Metin rengini þeffaf yap */
+}
+
+.text {
+	position: relative;
+	font-weight: bold;
+	/* Yazý kalýnlýðýný ayarlayýn */
+	font-size: 20px;
+	margin-top: 5%;
+	text-align: center;
+}
+
+.head-buttons-inner {
+	position: relative;
+	margin-top: 1%;
+	text-align: center;
+}
+
+.our-story {
+	backdrop-filter: blur(5px);
+	max-width: 700px;
+	margin: 0 auto;
+	position: Relative;
+	background: rgba(255, 255, 255, 0.05);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+	padding: 40px;
+	margin-top: 100px;
+	margin-bottom:50px;
+}
+
+	.our-story h1,
+	.our-story h2,
+	.our-story h3 {
+		padding: 0;
+		margin: 0 0 30px 0;
+		font-size: 30px;
+		font-weight: 700
+	}
+
+	.our-story p {
+		padding: 0;
+		margin: 0;
+		font-size: 15px;
+		line-height: 30px;
+		color: rgba(255, 255, 255, 0.7);
+		font-weight: 300;
+		letter-spacing: .5px
+	}
+
+	.our-story + .our-story {
+		margin-top: 30px
+	}
+
+.img-left,
+.img-right {
+	position: absolute;
+	top: 0;
+	width: 200px;
+	padding: 0;
+	margin: 0
+}
+
+	.img-left img,
+	.img-right img {
+		display: block;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		border-radius: 5px;
+		max-width: 100%;
+		-webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+		-moz-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+		box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4)
+	}
+
+	.img-left figcaption,
+	.img-right figcaption {
+		margin: 5px 0 0 0;
+		padding: 0;
+		font-size: 12px;
+		color: rgba(255, 255, 255, 0.3);
+		font-weight: 300
+	}
+
+#h1id {
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	text-align: left;
+}
+
+.main-footer {
+	background-color: #12181c;
+	color: #fff;
+}
+
+.footer-infos {
+}
+
+.copyright {
+	background-color: #12181c;
+	color: #ffffff65;
+}
+
+
+.img-left {
+	position: absolute;
+	top: 0px;
+	left: -220px;
+	font-size: 13px;
+	color: #ffffff5e;
+}
+
+	.img-left img {
+		width: 200px;
+	}
+
+.img-right {
+	position: absolute;
+	top: 0px;
+	left: 720px;
+	font-size: 13px;
+	color: #ffffff5e;
+}
+
+	.img-right img {
+		width: 200px;
+	}
+
+.mybuttonb {
+	position: relative;
+	height: 110px;
+	background-color: transparent !important;
+	border-bottom: solid 1px rgba(128, 128, 128, 0.5); /* 1px geniþlik, hafif gri */
+}
+
+.divdeneme {
+	position: relative; /* Göreceli konumlandýrma */
+	margin-left:250px;
+}
+
+.ahrefi {
+	color: white !important;
+	position: relative; /* Göreceli konumlandýrma */
+	z-index: 1;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 13px !important;
+	font-weight: bold !important;
+	margin-left:50px !important;
+}
+
+
+.ahrefi2 {
+	position: absolute;
+	font-family: 'Arial', sans-serif;
+	font-size: 17px !important;
+	color: white !important;
+	left: 42%;
+	font-weight:170 !important;
+	z-index: 2;
+}
+
+
+	.navbar .nav-link {
+		color: white; /* Yazý rengi beyaz */
+		padding: 10px 20px;
+		margin: 0 5px; /* Butonlar arasýnda boþluk */
+		border-radius: 5px; /* Köþeleri yuvarlatma */
+		text-align: center;
+		text-decoration: none; /* Alt çizgi olmadan yazý */
+	}
+
+		.navbar .nav-link:hover {
+			background-color: gray; /* Hover arka plan rengi beyaz */
+			color: black; /* Hover yazý rengi siyah */
+		}
+
+	/* Belirli butonlarý saða kaydýrmak için flexbox düzeni */
+	.navbar .navbar-nav {
+		display: flex;
+		justify-content: flex-start; /* Öðeleri sola hizala */
+		align-items: center;
+		gap: 10px; /* Öðeler arasýnda boþluk */
+	}
+
+	.navbar .yanagit {
+		margin-left: 40%; /* Sað tarafa gönder */
+	}
+
+
+#adres{
+	display:inline-block;
+	color:white;
+
+}
+.form-control2 {
+	padding: 12px 15px !important;
+	font-size: 16px !important;
+	width: 100% !important;
+	max-width: 500px !important;
+	border: 1px solid #ccc !important;
+	border-radius: 4px !important;
+}
+
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+	font-size: 18px;
+	text-align: left;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+	.table thead tr {
+		background-color: #4CAF50;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.table th,
+	.table td {
+		padding: 12px 15px;
+		border: 1px solid #ddd;
+	}
+
+	.table tbody tr {
+		transition: background-color 0.3s;
+	}
+
+		.table tbody tr:nth-child(even) {
+			background-color: #f9f9f9;
+		}
+
+		.table tbody tr:hover {
+			background-color: #f1f1f1;
+		}
+
+	.table tbody td {
+		color: #555;
+	}
+
+	.table a {
+		text-decoration: none;
+		color: #4CAF50;
+		font-weight: bold;
+		transition: color 0.2s;
+	}
+
+		.table a:hover {
+			color: #3e8e41;
+		}
+
+.table-container {
+	overflow-x: auto; /* Mobil cihazlar için yatay kaydýrma */
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.table-caption {
+	caption-side: top;
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: #333;
+	text-align: left;
+}
+
+.lister {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.lister li {
+	margin-top: 10px;
+	position: relative;
+	padding-left: 25px;
+	font-size: 15px;
+	line-height: 30px;
+	color: rgba(255, 255, 255, 0.7);
+	font-weight: 300;
+	letter-spacing: .5px
+}
+
+.lister li::before {
+	position: absolute;
+	width: 7px;
+	background: rgba(0, 0, 0, 0.4);
+	height: 7px;
+	border: 2px solid #39b65c;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	border-radius: 100%;
+	content: "";
+	left: 0;
+	top: 10px
+}
+
+
+
+div,
+ul,
+li,
+span,
+input,
+textarea,
+header,
+footer,
+nav,
+b,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box
+}
+
+input:focus,
+textarea:focus,
+div:focus,
+button:focus,
+select:focus {
+	outline: none
+}
+
+

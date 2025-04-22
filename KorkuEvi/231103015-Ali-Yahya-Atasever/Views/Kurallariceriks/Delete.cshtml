@@ -1,0 +1,35 @@
+﻿@model _231103015_Ali_Yahya_Atasever.Database.Kurallaricerik
+@{
+    Layout = "~/Views/Shared/adminpanel.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sil</title>
+</head>
+<body>
+
+<h3>Silmek İstediğine Emin Misin?</h3>
+<div>
+    <h4>Kurallaricerik</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kuralicerik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kuralicerik)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+            <a class="btn-back" asp-action="Index">Geri Dön</a>
+    </form>
+</div>
+</body>
+</html>
